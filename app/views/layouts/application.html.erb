@@ -6,25 +6,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>
+  <%= render 'layouts/shim' %><!-- for IE9 -->
 </head>
 <body>
   <%= render 'layouts/header' %>
-
-  <header class="navbar navbar-fixed-top navbar-inverse"> <!--[CUI]what's this? -->
-	  <div class="navbar-inner"> <!--[CUI]what's this? -->
-		  <div class="container"> <!--[CUI]what's this? -->
-		    <%= link_to "sample app", '#', id: "logo" %> <!--[CUI]what's this? -->
-		    <nav>
-				<ul class="nav pull-right">
-					<li><%= link_to "Home",    '#' %></li>
-					<li><%= link_to "Help",    '#' %></li>
-					<li><%= link_to "Sign in", '#' %></li>
-				</ul>
-		    </nav>
-		  </div>
-	  </div>
-  </header>
   <div class="container">
 	  <%= yield %>
 	  <%= render 'layouts/footer' %>

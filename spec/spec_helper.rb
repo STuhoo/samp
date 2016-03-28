@@ -1,6 +1,7 @@
 #must write following 4 lines to effective capybara::DSL code
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
+
 require 'rspec/rails'
 require 'rspec/autorun'
 
