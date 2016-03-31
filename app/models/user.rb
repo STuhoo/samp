@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
 		format: { with: VALID_EMAIL_REGEX }, #vaild
 		uniqueness: {case_sensitive: false } #upcase unconcerned,unique
   #for unique
+  has_secure_password #add password/password_confirmation column
+  validates :password, length: { minimum: 6 }
 end
