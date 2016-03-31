@@ -6,6 +6,7 @@ gem 'rails', '4.2.5.1'
 
 #must set sass version as '2.3.2.0' to avoid the ruby version requirement >=2.0
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'sqlite3'
