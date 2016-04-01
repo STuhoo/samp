@@ -16,8 +16,16 @@ describe "User pages" do
   subject { page } #all test will call this var
   
   describe "signup page" do
-    before { visit root_path } 
+    before { visit signup_path }  # call to sign up URL
     it { should have_content('Sign up') }
-    it { should have_title(full_title('Home')) } 
+    it { should have_title(full_title('Sign up')) } 
+  end
+  
+  describe "profile page" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { visit user_path(user) } # call to user profile URL, no define
+    
+    it { should have_content(user.name) }
+    it { should have_title  (user.name) }
   end
 end
